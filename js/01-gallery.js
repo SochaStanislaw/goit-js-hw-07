@@ -1,6 +1,6 @@
 import { galleryItems } from "./gallery-items.js";
 
-const gallery = document.querySelector("ul.gallery");
+const gallery = document.querySelector(".gallery");
 
 for (const pic of galleryItems) {
   const item = `<div class="gallery__item">
@@ -26,24 +26,8 @@ gallery.addEventListener("click", (ev) => {
 });
 
 gallery.addEventListener("keydown", (ev) => {
-  if (ev.key === "Escape") {
-    // alert("test");
-    popUpPic.close();
+  onShow: if (ev.key === "Escape") {
+    alert("test");
+    // popUpPic.close();
   }
 });
-
-// gallery.addEventListener("click", (ev) => {
-//   ev.preventDefault();
-//   const popUpPic = basicLightbox.create(
-//     `<img src="${ev.target.dataset.source}"/>`
-//   );
-//   {
-//     onShow: (popUpPic) => {
-//       window.addEventListener("keydown", (ev) => {});
-//       if (ev.key === "Escape") {
-//         popUpPic.close();
-//       }
-//     };
-//   }
-//   popUpPic.show();
-// });
